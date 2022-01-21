@@ -7,7 +7,7 @@ function Search({ categories, category, setCategory }) {
       <div className="container">
         <ul>
           <li
-            className={category === 'all' && 'active'}
+            className={category === 'all' ? 'active' : ''}
             onClick={() => setCategory('all')}
           >
             All
@@ -15,7 +15,7 @@ function Search({ categories, category, setCategory }) {
           {categories?.map((ctgory, index) => (
             <li
               key={index}
-              className={category === ctgory && 'active'}
+              className={category === ctgory ? 'active' : ''}
               onClick={() => setCategory(ctgory)}
             >
               {ctgory}

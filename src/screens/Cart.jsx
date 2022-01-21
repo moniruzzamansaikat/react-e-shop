@@ -1,5 +1,4 @@
-import React from 'react';
-import { useContext, useEffect } from 'react/cjs/react.development';
+import React, { useContext, useEffect } from 'react';
 import CartItems from '../components/CartItems';
 import Checkout from '../components/Checkout';
 import SuccessOrder from '../components/SuccessOrder';

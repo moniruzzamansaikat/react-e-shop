@@ -1,7 +1,6 @@
 import React from 'react';
 import ProductItem from './ProductItem';
 import PropTypes from 'prop-types';
-import useLocalstorage from '../hooks/useLocalstorage';
 
 function Products({ products }) {
   return (

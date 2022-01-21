@@ -1,5 +1,4 @@
-import React from 'react';
-import { useContext } from 'react/cjs/react.development';
+import React, { useContext } from 'react';
 import { ProductContext } from '../context/productContext';
 
 function ProductItem({ product }) {

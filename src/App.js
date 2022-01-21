@@ -9,7 +9,7 @@ import Home from './screens/Home';
 import Login from './screens/Login';
 import Cart from './screens/Cart';
 import { ProductContext } from './context/productContext';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 import { UserContext } from './context/userContext';
 import Profile from './screens/Profile';
 import Private from './screens/Private';

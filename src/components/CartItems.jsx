@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import propTypes from 'prop-types';
-import { useContext } from 'react/cjs/react.development';
 import { ProductContext } from '../context/productContext';
 
 function CartItems({ carts }) {

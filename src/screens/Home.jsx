@@ -22,6 +22,7 @@ function Home() {
     if (products.length) {
       return [...new Set(products.map((product) => product.category))];
     }
+    return [];
   }, [products]);
 
   // update products when category change

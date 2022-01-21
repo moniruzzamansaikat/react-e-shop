@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import LoginForm from '../components/LoginForm';
 import '../firebase-config';
 import { signInWithPopup, GoogleAuthProvider, getAuth } from 'firebase/auth';
 import { UserContext } from '../context/userContext';
-import { useEffect } from 'react/cjs/react.development';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
