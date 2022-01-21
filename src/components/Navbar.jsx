@@ -14,7 +14,12 @@ function Navbar() {
         <div className="container-fluid">
           <Link to="/">
             <span className="navbar-brand">
-              <img src="/img/logo.png" id="logo" alt="" />
+              <img
+                src="/img/logo.png"
+                id="logo"
+                alt=""
+                style={{ marginLeft: '-30px' }}
+              />
             </span>
           </Link>
           <button

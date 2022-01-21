@@ -2,26 +2,31 @@ import React, { useContext } from 'react';
 import { ProductContext } from '../context/productContext';
 
 function ProductItem({ product }) {
-  const { addToCart } = useContext(ProductContext);
+  const { addToCart, cart, removeFromCart } = useContext(ProductContext);
   const { id, title, description, price, category, image } = product;
 
+  // add to cart
   const handleAddToCart = () => {
-    addToCart(
-      {
-        id,
-        image,
-        title,
-        price,
-      },
-      id
-    );
+    if (cart.some((item) => item.id === id)) {
+      removeFromCart(id);
+    } else {
+      addToCart(
+        {
+          id,
+          image,
+          title,
+          price,
+        },
+        id
+      );
+    }
   };
 
   return (
     <div className="product-item">
-      <div className="row">
+      <div className="row mx-0">
         <div className="col-12 col-lg-5">
-          <img src={image} alt={title} className="img-fluid product-img mb-3" />
+          <img src={image} alt={title} className="product-img mb-3" />
         </div>
         <div className="col-12 col-lg-7">
           <h2>{title}</h2>
@@ -33,7 +38,9 @@ function ProductItem({ product }) {
             Category: <span>{category}</span>
           </p>
           <button className="btn btn-custom" onClick={handleAddToCart}>
-            Add to cart
+            {cart.some((item) => item.id === id)
+              ? 'Remove from cart'
+              : 'Add to Cart'}
           </button>
         </div>
       </div>

@@ -62,20 +62,18 @@ function App() {
       }}
     >
       <UserContext.Provider value={{ user, setUser }}>
-        <div>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/sign-in" element={<Login />} />
-            <Route element={<Private />}>
-              <Route path="/profile" element={<Profile />} />
-            </Route>
-          </Routes>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/sign-in" element={<Login />} />
+          <Route element={<Private />}>
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+        </Routes>
 
-          <GoToTop />
-          <ToastContainer />
-        </div>
+        <GoToTop />
+        <ToastContainer />
       </UserContext.Provider>
     </ProductContext.Provider>
   );

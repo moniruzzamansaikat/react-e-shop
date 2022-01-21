@@ -24,10 +24,15 @@ function Cart() {
         {confirmedOrder && <SuccessOrder />}
 
         {!confirmedOrder && cart.length === 0 && (
-          <div className="empty-cart">
-            <img src="/img/empty-cart.svg" alt="empty cart" />
+          <div className="empty-cart mt-5">
+            <img
+              src="/img/empty-cart.svg"
+              alt="empty cart"
+              className="img-fluid"
+              style={{ maxWidth: '200px' }}
+            />
             <h2 className="mt-5">
-              Your cart is empty | <Link to="/">Show Now</Link>
+              Your cart is empty | <Link to="/">Shop Now</Link>
             </h2>
           </div>
         )}
